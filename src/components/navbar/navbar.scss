@@ -1,0 +1,81 @@
+@import "../../app.scss";
+
+.navbar {
+  height: 100px;
+
+  .wrapper {
+    max-width: 1366px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+
+    @include mobile {
+      justify-content: flex-end;
+      padding: 20px;
+    }
+
+    span {
+      font-weight: bold;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    .social {
+      display: flex;
+      gap: 20px;
+
+      .github {
+        filter: invert(1);
+      }
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+
+      .tooltip {
+        position: relative;
+        display: inline-block;
+
+        .tooltip-text {
+          visibility: hidden;
+          width: 120px;
+          background-color: rgba(0, 0, 0, 0.8);
+          color: white;
+          text-align: center;
+          border-radius: 8px;
+          padding: 8px;
+          position: absolute;
+          z-index: 1;
+          bottom: 125%;
+          left: 50%;
+          transform: translateX(-50%);
+          opacity: 0;
+          transition: opacity 0.3s ease, transform 0.3s ease;
+
+          /* Arrow */
+          &::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
+          }
+        }
+
+        &:hover .tooltip-text {
+          visibility: visible;
+          opacity: 1;
+          transform: translateX(-50%) translateY(-5px);
+        }
+      }
+    }
+  }
+}

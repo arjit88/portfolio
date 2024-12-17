@@ -1,0 +1,140 @@
+.portfolio {
+  position: relative;
+
+  .progress {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding-top: 50px;
+    text-align: center;
+    color: orange;
+    font-size: 36px;
+
+    .progressBar {
+      height: 10px;
+      background-color: white;
+      border-radius: 50px;
+    }
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    .wrapper {
+      max-width: 1366px;
+      height: 100%;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+
+      .imageContainer {
+        flex: 1;
+        height: 300px;
+        cursor: pointer;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+
+      .textContainer {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        h2 {
+          font-size: 72px;
+        }
+
+        .demoButton,
+        .viewImageButton,
+        .viewDescriptionButton {
+          background-color: orange;
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: none;
+          border-radius: 10px;
+          padding: 10px;
+          width: 200px;
+          color: white;
+          cursor: pointer;
+
+          &:hover {
+            background-color: darkorange;
+          }
+        }
+      }
+    }
+  }
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+
+    .modalContent {
+      background-color: #1a1a2e;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      max-width: 800px;
+      max-height: 80vh;
+      overflow-y: auto;
+
+      img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        border-radius: 10px;
+      }
+
+      .descriptionContainer {
+        max-height: 500px;
+        overflow-y: auto;
+        padding: 10px;
+      }
+
+      .buttonContainer {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+
+        button {
+          margin-top: 20px;
+          padding: 10px 20px;
+          background-color: orange;
+          border: none;
+          border-radius: 5px;
+          color: white;
+          cursor: pointer;
+          transition: background-color 0.3s;
+
+          &:hover {
+            background-color: darkorange;
+          }
+        }
+      }
+    }
+  }
+}
