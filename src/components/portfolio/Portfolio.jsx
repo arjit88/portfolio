@@ -40,7 +40,7 @@ const descriptions = {
     <div>
       <h3>Overview:</h3>
       <p>
-        Dive into a fully functional Instagram clone built with React and
+        Dive into a fully functional Instagram Clone built with React and
         Firebase, designed to provide an immersive social media experience. This
         project showcases a blend of modern web development techniques and best
         practices.
